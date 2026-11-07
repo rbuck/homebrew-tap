@@ -29,12 +29,15 @@ class Hordes < Formula
   end
 
   def install
-    bin.install "hordes-cli"
-    bin.install "hordes-tui"
+    bin.install "bin/hordes-cli"
+    bin.install "bin/hordes-tui"
+    (prefix/"data").install "data/rules.toml"
+    doc.install "README.md", "LICENSE"
   end
 
   test do
-    assert_equal "Hello from Homebrew!\n",
-      shell_output("#{bin}/hello-brew")
+    assert_match "hordes-cli", shell_output("#{bin}/hordes-cli --help")
+    assert_match "hordes-tui", shell_output("#{bin}/hordes-tui --help")
+    assert_path_exists prefix/"data/rules.toml"
   end
 end

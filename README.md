@@ -16,6 +16,8 @@ After the tap is added you can also install by short name, e.g. brew install <fo
 
 To build, install, and test:
 
+To build, install, and test:
+
 ```shell
 brew style rbuck/tap/<formula>
 brew audit --new --formula rbuck/tap/<formula>
@@ -27,7 +29,7 @@ brew test --verbose rbuck/tap/hordes
 Prefix all the above commands with the following for private repositories:
 
 ```shell
-HOMEBREW_GITHUB_API_TOKEN="$(gh auth token)"
+HOMEBREW_GITHUB_API_TOKEN=$(gh auth token)
 ```
 
 ## Documentation
