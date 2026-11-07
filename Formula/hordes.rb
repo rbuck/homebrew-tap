@@ -4,28 +4,28 @@ class Hordes < Formula
   license "MIT"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://api.github.com/repos/rbuck/hordes-rs/releases/assets/720773340",
+    url "https://api.github.com/repos/rbuck/hordes-rs/releases/assets/720903905",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: Bearer #{ENV.fetch("HOMEBREW_GITHUB_API_TOKEN")}",
           "X-GitHub-Api-Version: 2022-11-28",
         ]
-    sha256 "594a2e4b9f3d60d226d6b73460251f83f6fd78a223b5758fc2fe74a314f75159"
+    sha256 "c2476ad9fa0b1ebcc3d7585dc0ff0aa79ab609d50c7c9fbba6a6056baa217604"
   end
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://api.github.com/repos/rbuck/hordes-rs/releases/assets/720773333",
+    url "https://api.github.com/repos/rbuck/hordes-rs/releases/assets/720903908",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: Bearer #{ENV.fetch("HOMEBREW_GITHUB_API_TOKEN")}",
           "X-GitHub-Api-Version: 2022-11-28",
         ]
-    sha256 "1765bc9df6f7b1f86d7640982a210100ed7f100f2708c4ccbb2dde65934953e0"
+    sha256 "9aa22a97f67e70e23fae343f0c87f9fbeb58febbbecb81d6b7f4ae04e7bbdc33"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/rbuck/hordes-rs/releases/download/v0.7.0/hordes-rs-0.7.0-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "d2dffe1d99544ee43481cbde0bb3aa23f4757c589fbb3b21717f0619cfaccd4d"
+    url "https://github.com/rbuck/hordes-rs/releases/download/v0.7.3/hordes-0.7.3-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "4b99de0e0af56aeb4591310b183ebbb80e17b107153c72925946ebb9aaf37565"
   end
 
   def install
