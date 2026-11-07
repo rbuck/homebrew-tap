@@ -8,7 +8,7 @@ class Hordes < Formula
         headers: [
           "Accept: application/octet-stream",
           "Authorization: Bearer #{ENV.fetch("HOMEBREW_GITHUB_API_TOKEN")}",
-          "X-GitHub-Api-Version: 2022-11-28"
+          "X-GitHub-Api-Version: 2022-11-28",
         ]
     sha256 "594a2e4b9f3d60d226d6b73460251f83f6fd78a223b5758fc2fe74a314f75159"
   end
@@ -18,7 +18,7 @@ class Hordes < Formula
         headers: [
           "Accept: application/octet-stream",
           "Authorization: Bearer #{ENV.fetch("HOMEBREW_GITHUB_API_TOKEN")}",
-          "X-GitHub-Api-Version: 2022-11-28"
+          "X-GitHub-Api-Version: 2022-11-28",
         ]
     sha256 "1765bc9df6f7b1f86d7640982a210100ed7f100f2708c4ccbb2dde65934953e0"
   end
