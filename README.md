@@ -26,6 +26,17 @@ brew test rbuck/tap/<formula>
 brew test --verbose rbuck/tap/hordes
 ```
 
+To update a formula from a GitHub release:
+
+```shell
+python scripts/update_formula.py hordes v0.7.3
+```
+
+The script reads the repository from the formula's `homepage`, infers release
+asset names from the existing platform URLs, and updates their URLs and SHA256
+values from the release's `SHA256SUMS.txt`. Authenticate with `gh auth login`
+before running it.
+
 Prefix all the above commands with the following for private repositories:
 
 ```shell
